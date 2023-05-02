@@ -1,0 +1,41 @@
+body {
+  background: #223;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  --size: 200px;
+
+  background: red;
+  width: var(--size);
+  height: var(--size);
+
+  /*! Puedo poner sola la transition aqui porque es elemento en general y lo tendre tanto el hover como aqui */
+  /* transition: all 1s; */
+
+  /*! Transiciones multiples */
+  /* transition: background 0.25s, height 2s, width 2s; */
+
+  transition: all 1s ease 2s;
+}
+
+.box:hover {
+  background: blue;
+  height: 400px;
+  transform: translate(200px, 200px);
+
+  /* transition: all 0.5s; */
+
+  /*! Dando propiedades en una sola linea */
+  /* transition: all 1s ease 0s; */
+
+  /* !Propiedades individualmente */
+  /* transition-property: all; /* Or backgorund solamente. */
+  /* transition-duration: 1s;
+  transition-timing-function: ease;
+  transition-delay: 0s; */
+}
